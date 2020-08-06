@@ -1,0 +1,183 @@
+/* Import Google web font Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600&display=swap');
+
+/* Declare gloabl css variables*/
+:root {
+    --primary-color: #362F74;
+    --primary-dark-color: #282451;
+    --primary-light-color: #BDBDBD; 
+    --success-text-color:#219653;;
+    --warning-text-color:#EB5757;
+    --info-text-color: #828282;
+    --bg-light-color: #F5F4FF; 
+
+    --main-font-family: 'Source Sans Pro', sans-serif;
+
+    --h3-size: 36px;
+    --section-title-size: 32px;
+    --card-title-size: 24px;
+    --card-info-size: 18px;
+ 
+}
+
+
+body {
+    font-family: var(--main-font-family);
+    background-color: var(--bg-light-color);
+}
+/* Remove Bootstrap default gutters and padding*/
+.row {
+    padding: 0px;
+    margin: 0px;
+    max-width: 1085px;
+}
+/* Set Custom Heading Font Sizes*/
+
+h3 {font-size: var(--h3-size);}
+
+/* Set Font weight Classes*/
+.heading {font-weight: bold}
+.light-heading {font-weight: 600}
+
+.primary-text{
+    color: var(--primary-color);
+}
+.success-text{
+    color: var(--success-text-color);
+}
+.warning-text{
+    color: var(--warning-text-color);
+}
+
+.info-text{
+    color: var(--info-text-color);
+    font-size: var(--card-info-size);
+}
+
+.section-title{
+    font-size: var(--section-title-size);
+}
+
+.btn-primary{
+padding: 15px 35px;
+background-color: var(--primary-color);
+font-weight: 600;
+font-size:  var(--card-info-size);
+border-radius: 5px;
+width: 197px;
+}
+
+.btn-primary:hover{
+    background-color: var(--primary-dark-color);
+}
+
+
+
+.payment-main{
+    
+}
+
+.container-xl{
+    max-width: 1190px;
+}
+.custom-card{
+    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+}
+.custom-card:hover{
+    box-shadow: 1px 16px 32px rgba(64, 112, 255, 0.1);
+}
+.account-details-card{
+    padding: 35px 56px;
+    width: 390px;
+    height: 154px;
+    border-radius: 20px;
+    
+}
+
+.card-title{
+    font-size: var(--card-title-size);
+}
+
+.kobo-figure{
+    font-size: var(--card-title-size);
+    color: var(--info-text-color)
+}
+
+
+.recent-transactions-card{
+    width: 329px;
+    height: 223px;
+    border-radius: 10px;
+    padding: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent-transactions-card h4{
+    margin-bottom: 5px;
+}
+
+.recent-transactions-card p:last-of-type{
+    margin-bottom: 5px;
+}
+
+.transaction-history-title{
+    vertical-align: middle;
+    line-height: 56px;
+}
+
+.transaction-sort{
+    font-size: var(--card-info-size);
+}
+
+.multiselect-selected-text{
+    font-size: var(--card-info-size); 
+}
+
+span.multiselect-native-select > div > ul{
+    font-size: var(--card-info-size); 
+    width: 100%;
+    margin-top: 8px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    padding-top: 18px;
+    padding-bottom: 14px;
+}
+
+.multiselect-container>li>a>label>input[type=checkbox]{
+    margin-right: 14px;
+}
+
+.multiselect-container>li>a>label{
+    padding: 3px 20px 3px 20px;
+}
+
+.sort-button{
+width: 197px;
+height: 56px;
+border: 1.5px solid #333333;
+box-sizing: border-box;
+border-radius: 10px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;}
+
+.transaction-table{
+    background-color: white;
+}
+
+.table .card-title,
+.table .info-text{
+    margin: 0px;
+}
+
+.data-block{
+    padding: 22px!important;
+}
+.data-block.first-column{
+    padding-left: 44px!important;
+}
