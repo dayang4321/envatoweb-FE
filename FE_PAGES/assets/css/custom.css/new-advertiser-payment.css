@@ -57,14 +57,15 @@ h3 {font-size: var(--h3-size);}
 .section-title{
     font-size: var(--section-title-size);
 }
-
+.btn{
+    font-weight: 600;
+    font-size:  var(--card-info-size);
+    border-radius: 5px;
+    width: 197px;
+    padding: 15px 35px;
+}
 .btn-primary{
-padding: 15px 35px;
 background-color: var(--primary-color);
-font-weight: 600;
-font-size:  var(--card-info-size);
-border-radius: 5px;
-width: 197px;
 }
 
 .btn-primary:hover{
@@ -89,7 +90,7 @@ width: 197px;
 }
 .account-details-card{
     padding: 35px 56px;
-    width: 390px;
+    max-width: 390px;
     height: 154px;
     border-radius: 20px;
     
@@ -106,7 +107,7 @@ width: 197px;
 
 
 .recent-transactions-card{
-    width: 329px;
+  
     height: 223px;
     border-radius: 10px;
     padding: 38px;
@@ -164,7 +165,8 @@ border-radius: 10px;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-align-items: center;}
+align-items: center;
+}
 
 .transaction-table{
     background-color: white;
@@ -178,6 +180,143 @@ align-items: center;}
 .data-block{
     padding: 22px!important;
 }
+.data-show
+{
+    display: none;
+}
 .data-block.first-column{
     padding-left: 44px!important;
+}
+.modal-backdrop {
+    background-color: var(--bg-light-color);
+    opacity: 1!important;
+}
+
+.modal-body td{
+    padding: 0 18px 12px 12px;
+}
+
+.modal-content{
+    border-radius:10px;
+    border: none;
+}
+
+@media (max-width: 1200px) {
+
+    .account-details-card{
+        padding: 30px 18px;  
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .account-details-card{
+        padding: 30px 12px;  
+    }
+    .btn{
+        width: 167px;
+        padding: 15px 20px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .account-details-card{
+        padding: 30px 20px;  
+    }
+    .btn{
+        width: 197px;
+        padding: 15px 35px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .account-details-card{
+        padding: 35px 56px;
+        max-width: 100%;
+    }
+    .btn{
+        width: 100%;
+        padding: 25px 35px;
+    }
+    .recent-transactions-card{
+        padding: 38px 77px;
+        align-items: flex-start;
+    }
+    .transaction-sort {
+        display:flex;
+         flex-direction:row;
+         align-items:center;
+    }
+    .transaction-sort {
+        display:flex;
+     flex-direction: unset;
+        align-items:center;
+    }
+    .sort-button{
+    width:77.5vw;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .transaction-table .info-text,
+    .data-hide
+    {
+        display: none;
+    }
+    .data-show
+    {
+        display: table-cell;
+    }
+
+    .data-block.first-column{
+        padding-left: 20px!important;
+    }
+    .transaction-table td{
+        vertical-align: middle;
+    }
+    
+    
+}
+
+@media (max-width: 575px) {
+
+    :root {   
+        --h3-size: 32px;
+        --section-title-size: 32px;
+        --card-title-size: 22px;
+        --card-info-size: 18px;
+     
+    }
+
+    .account-details-card{
+        padding: 35px 26px;
+     
+    }
+    .recent-transactions-card{
+        padding: 38px 50px;
+        align-items: flex-start;
+    }
+
+    .sort-button{
+        width:75.5vw;}
+   
+}
+
+
+@media (max-width: 380px) {
+
+    .account-details-card {
+        padding: 30px 20px;
+    }
+    .sort-button{
+        width:72vw;}
+ 
+   
 }

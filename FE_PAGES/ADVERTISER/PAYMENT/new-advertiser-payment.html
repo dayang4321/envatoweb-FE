@@ -23,33 +23,33 @@
     </head>
 <body>
     
-    <main class="payment-main container-xl border mx-auto pl-4 py-5">
+    <main class="payment-main container-xl border mx-auto pl-3 pl-md-4 py-5">
 
         <section class="account-details-row row py-5 px-2">
-            <div class="col-md-auto pl-0">
+            <div class="col-md-6 col-lg-5 mr-lg-n4 mr-xl-n5 pr-lg-4 pl-0 pr-0 pr-md-3 mb-5 mb-md-0">
                 <div class="account-details-card custom-card ">
-                    <img src="../../assets/images/advertiser-account.svg" alt="account-balance" class="float-left mr-4"> 
+                    <img src="../../assets/images/advertiser-account.svg" alt="account-balance" class="float-left mr-3 mr-sm-4"> 
                     <h3 class="primary-text light-heading">$1,250<span class="kobo-figure">.00</span></h3>
                     <p class="card-title">Account Balance</p>
                 </div>
             </div>
-            <div class="col-md-auto">
+            <div class="col-md-6 col-lg-5 ml-lg-n2 pr-lg-4 px-0 px-md-3 mr-lg-n4 mb-4 mb-md-0">
                 <div class="account-details-card custom-card ">
-                    <img src="../../assets/images/advertiser-ledger.svg" alt="ledger-balance" class="float-left mr-4"> 
+                    <img src="../../assets/images/advertiser-ledger.svg" alt="ledger-balance" class="float-left mr-3 mr-sm-4"> 
                     <h3 class="primary-text light-heading">$1,750<span class="kobo-figure">.00</span></h3>
                     <p class="card-title">Ledger Balance</p>
                 </div>
             </div>
-            <div class="col-md-auto d-flex flex-column justify-content-center">
-                <button class="btn-primary ">Fund Account</button>
+            <div class="col-lg-auto ml-md-3 ml-lg-0 px-0 px-md-3 d-flex mt-md-4 mt-2 mt-lg-0 flex-column justify-content-center">
+                <button class="btn btn-primary mx-md-auto mx-lg">Fund Account</button>
             </div>
         </section>
 
         <section class="recent-transactions pt-4 pb-5 px-2 row">
             <h3 class="section-title light-heading pb-4">Recent Transactions</h3>
             <div class="recent-transactions-row d-flex flex-row w-100 justify-content-between row">
-                <div class="col-md-auto pl-0">
-                    <div class="recent-transactions-card custom-card">
+                <div class="col-md-4 px-0">
+                    <div class="recent-transactions-card mr-md-auto mb-4 mb-md-0 col-md-11 custom-card">
                         <div>
                         <h4 class="card-title light-heading">Chase Bank</h4>
                         <p class="info-text">Bank Name</p>                                               
@@ -58,8 +58,8 @@
                         </div>
                    </div>
                 </div>
-                <div class="col-md-auto">
-                    <div class="recent-transactions-card custom-card">
+                <div class="col-md-4 px-0">
+                    <div class="recent-transactions-card mx-auto mb-4 mb-md-0 col-md-11 custom-card">
                         <div>
                         <h4 class="card-title light-heading">Private Campaign</h4>
                         <p class="info-text">Campaign Type</p>                                               
@@ -68,8 +68,8 @@
                         </div>
                    </div>
                 </div>
-                <div class="col-md-auto pr-0">
-                    <div class="recent-transactions-card custom-card">
+                <div class="col-md-4 px-0">
+                    <div class="recent-transactions-card ml-auto col-md-11 custom-card">
                         <div>
                         <h4 class="card-title light-heading">Private Campaign</h4>
                         <p class="info-text">Campaign Type</p>                                               
@@ -82,11 +82,11 @@
             </div>
         </section>
 
-        <section class="transaction-history row">
-            <div class="transaction-history-header pb-4  row w-100 d-flex justify-content-between">
-                <h3 class="section-title transaction-history-title light-heading mb-0  col-md-auto">Transaction History</h3>
+        <section class="transaction-history row px-2">
+            <div class="transaction-history-header pb-4 px-0 row w-100 d-flex justify-content-between">
+                <h3 class="section-title transaction-history-title light-heading mb-0 px-0  col-md-auto">Transaction History</h3>
 
-                <div class="col-md-auto d-flex flex-row align-items-center transaction-sort">
+                <div class="transaction-sort col-md-auto px-0 ">
                     <span class="mr-2">Sort By:</span>   
                     <select id="transaction-history-sort" class="" multiple="multiple">
                         <option value="date">Date</option>
@@ -109,21 +109,24 @@
                         <h4 class="card-title light-heading">Private Campaign</h4>
                         <p class="info-text">Campaign Type</p>         
                     </td>
-                    <td class="data-block">
-                        <h4 class="card-title light-heading">Chase Bank</h4>
+                    <td class="data-block data-hide">
+                        <h4 class="card-title light-heading transaction-method">Chase Bank</h4>
                         <p class="info-text">Payment Method</p>       
                     </td>
                     <td class="data-block">
                         <h4 class="card-title light-heading primary-text">$100</h4>
                         <p class="info-text"> Amount Debited</p>       
                     </td>
-                    <td class="data-block">
-                        <h4 class="card-title light-heading"><time datetime="2019-06-03">03/06/2019</time></h4>
+                    <td class="data-block data-hide">
+                        <h4 class="card-title transaction-time  light-heading"><time datetime="2019-06-03">03/06/2019</time></h4>
                         <p class="info-text">Payment Date</p>       
                     </td>
-                    <td class="data-block">
+                    <td class="data-block data-hide">
                         <h4 class="card-title light-heading transaction-status">Successful</h4>
                         <p class="info-text">Status</p>       
+                    </td>
+                    <td class="data-show align-middle" data-toggle="modal" data-target="#transaction-modal">
+                        <img src="../../assets/images/arrow.svg" alt="arrow">
                     </td> 
 
                     </tr>
@@ -134,21 +137,24 @@
                         <h4 class="card-title light-heading">Private Campaign</h4>
                         <p class="info-text">Campaign Type</p>         
                     </td>
-                    <td class="data-block">
-                        <h4 class="card-title light-heading">Chase Bank</h4>
+                    <td class="data-block data-hide">
+                        <h4 class="card-title light-heading transaction-method">Chase Bank</h4>
                         <p class="info-text">Payment Method</p>       
                     </td>
                     <td class="data-block">
                         <h4 class="card-title light-heading primary-text">$20</h4>
                         <p class="info-text"> Amount Debited</p>       
                     </td>
-                    <td class="data-block">
-                        <h4 class="card-title light-heading"><time datetime="2019-06-03">03/06/2019</time></h4>
+                    <td class="data-block data-hide">
+                        <h4 class="card-title transaction-time  light-heading"><time datetime="2019-06-03">03/06/2019</time></h4>
                         <p class="info-text">Payment Date</p>       
                     </td>
-                    <td class="data-block">
+                    <td class="data-block data-hide">
                         <h4 class="card-title light-heading transaction-status">Failed</h4>
                         <p class="info-text">Status</p>       
+                    </td>
+                    <td class="data-show align-middle" data-toggle="modal" data-target="#transaction-modal">
+                        <img src="../../assets/images/arrow.svg" alt="arrow">
                     </td> 
 
                     </tr>
@@ -159,22 +165,25 @@
                             <h4 class="card-title light-heading">Private Campaign</h4>
                             <p class="info-text">Campaign Type</p>         
                         </td>
-                        <td class="data-block">
-                            <h4 class="card-title light-heading">Chase Bank</h4>
+                        <td class="data-block data-hide">
+                            <h4 class="card-title light-heading transaction-method">Chase Bank</h4>
                             <p class="info-text">Payment Method</p>       
                         </td>
                         <td class="data-block">
                             <h4 class="card-title light-heading primary-text">$1200</h4>
                             <p class="info-text"> Amount Debited</p>       
                         </td>
-                        <td class="data-block">
-                            <h4 class="card-title light-heading"><time datetime="2019-06-03">03/06/2019</time></h4>
+                        <td class="data-block data-hide">
+                            <h4 class="card-title transaction-time  light-heading"><time datetime="2019-06-03">03/06/2019</time></h4>
                             <p class="info-text">Payment Date</p>       
                         </td>
-                        <td class="data-block">
+                        <td class="data-block data-hide">
                             <h4 class="card-title light-heading transaction-status">Successful</h4>
                             <p class="info-text">Status</p>       
-                        </td> 
+                        </td>
+                        <td class="data-show align-middle" data-toggle="modal" data-target="#transaction-modal">
+                            <img src="../../assets/images/arrow.svg" alt="arrow">
+                        </td>
     
                     </tr>
 
@@ -184,26 +193,85 @@
                             <h4 class="card-title light-heading">Private Campaign</h4>
                             <p class="info-text">Campaign Type</p>         
                         </td>
-                        <td class="data-block">
-                            <h4 class="card-title light-heading">Chase Bank</h4>
+                        <td class="data-block data-hide">
+                            <h4 class="card-title light-heading transaction-method">Chase Bank</h4>
                             <p class="info-text">Payment Method</p>       
                         </td>
-                        <td class="data-block">
+                        <td class="data-block ">
                             <h4 class="card-title light-heading primary-text">$600</h4>
-                            <p class="info-text"> Amount Debited</p>       
+                            <p class="info-text">Amount Debited</p>       
                         </td>
-                        <td class="data-block">
-                            <h4 class="card-title light-heading"><time datetime="2019-06-03">03/06/2019</time></h4>
+                        <td class="data-block data-hide">
+                            <h4 class="card-title transaction-time light-heading"><time class="" datetime="2019-06-03">03/06/2019</time></h4>
                             <p class="info-text">Payment Date</p>       
                         </td>
-                        <td class="data-block">
+                        <td class="data-block data-hide">
                             <h4 class="card-title light-heading transaction-status">Failed</h4>
                             <p class="info-text">Status</p>       
                         </td> 
+                        <td class="transaction-expand data-show align-middle" data-toggle="modal" data-target="#transaction-modal" >
+                            <img src="../../assets/images/arrow.svg" alt="arrow">
+                        </td>
     
                     </tr>
                 </tbody>
               </table>
+           
+              <div class="modal fade p-3 p-sm-4" id="transaction-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  
+                <div class="modal-head p-3 light-heading card-title text-center">
+                    <button type="button" class="close float-left" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="../../assets/images/back-arrow.svg"></span>
+                      </button>
+                     <span class="ml-n3"> Transaction</span>
+                </div>
+              
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                   
+                    <div class="modal-body py-5 px-4">
+                      <table>
+                          <tr>
+                              <td><img src="../../assets/images/profile 1.svg"></td>
+                              <td class="modal-data">
+                                <h4 class=" modal-topic modal-text card-title light-heading "></h4>
+                                <p class="modal-info modal-text info-text"></p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><img src="../../assets/images/credit-card 1.svg"></td>
+                            <td class="modal-data">
+                              <h4 class=" modal-topic modal-text card-title light-heading "></h4>
+                              <p class="modal-info modal-text info-text"></p>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td><img src="../../assets/images/dollar-sign 1.svg"></td>
+                            <td class="modal-data">
+                              <h4 class=" modal-topic modal-text card-title light-heading "></h4>
+                              <p class="modal-info modal-text info-text"></p>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td><img src="../../assets/images/calendar 1.svg"></td>
+                            <td class="modal-data">
+                              <h4 class=" modal-topic modal-text card-title light-heading "></h4>
+                              <p class="modal-info modal-text info-text"></p>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td><img src="../../assets/images/checkmark-circle-outline 1.svg"></td>
+                            <td class="modal-data">
+                              <h4 class=" modal-topic modal-text card-title light-heading  transaction-status"></h4>
+                              <p class="modal-info modal-text info-text"></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
 
 
         </section>
